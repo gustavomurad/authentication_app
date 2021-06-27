@@ -22,7 +22,7 @@ class AccountLoginSignupButton extends StatelessWidget {
                 ? "Don't have an Account? "
                 : "Already have an Account? ",
             style: TextStyle(
-              color: kPrimaryBlueColor,
+              color: primaryDarkColor,
             ),
           ),
           GestureDetector(
@@ -30,7 +30,7 @@ class AccountLoginSignupButton extends StatelessWidget {
             child: Text(
               this.isLogin ? "Sign Up" : "Sign In",
               style: TextStyle(
-                color: kPrimaryBlueColor,
+                color: primaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),

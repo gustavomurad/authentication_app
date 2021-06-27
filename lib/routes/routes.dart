@@ -1,4 +1,4 @@
-import 'package:authentication_app/pages/login_page.dart';
+import 'package:authentication_app/pages/signin_page.dart';
 import 'package:authentication_app/pages/signup_page.dart';
 import 'package:authentication_app/pages/welcome_page.dart';
 import 'package:seafarer/seafarer.dart';
@@ -17,7 +17,7 @@ class Routes {
       SeafarerRoute(
         name: "/login",
         builder: (context, args, params) {
-          return LoginPage();
+          return SignInPage();
         },
       ),
       SeafarerRoute(

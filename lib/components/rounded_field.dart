@@ -31,7 +31,7 @@ class RoundedField extends StatelessWidget {
         vertical: 5,
       ),
       decoration: BoxDecoration(
-        color: kPrimaryBlueLightColor,
+        color: primaryLightColor,
         borderRadius: BorderRadius.circular(29),
       ),
       child: TextFormField(

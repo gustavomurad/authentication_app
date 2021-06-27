@@ -1,4 +1,4 @@
-import 'package:authentication_app/backgrounds/gradient_background.dart';
+import 'package:authentication_app/backgrounds/background.dart';
 import 'package:authentication_app/components/rounded_button.dart';
 import 'package:authentication_app/routes/routes.dart';
 import 'package:authentication_app/theme/colors.dart';
@@ -14,34 +14,48 @@ class WelcomePage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        child: GradientBackground(
+        child: Background(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                'assets/icons/logo_rb.svg',
-                width: size.width * 0.6,
-              ),
-              SizedBox(
-                height: size.height * 0.02,
-              ),
-              Image.asset(
-                'assets/images/rb-office.png',
-                width: size.width * 0.8,
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Positioned(
+                    child: SvgPicture.asset(
+                      'assets/images/bitcoin-network-2.svg',
+                      height: size.height * 0.5,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 30,
+                    child: Container(
+                      width: size.width * 0.8,
+                      child: Text(
+                        'Bitcoin is an innovative payment network and a new kind of money.',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        softWrap: true,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: size.height * 0.03,
               ),
               RoundedButton(
-                label: 'LOGIN',
+                label: 'Sign In',
                 onPressed: () => Routes.seafarer.navigate(
                   "/login",
                   transitions: [SeafarerTransition.zoom_in],
                 ),
               ),
               RoundedButton(
-                label: 'SIGN UP',
-                backgroundColor: kPrimaryBlueLightColor,
+                label: 'Sign Up',
+                backgroundColor: primaryLightColor,
                 onPressed: () => Routes.seafarer.navigate(
                   "/signup",
                   transitions: [SeafarerTransition.zoom_in],

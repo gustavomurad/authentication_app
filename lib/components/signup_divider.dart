@@ -16,7 +16,7 @@ class SignUpDivider extends StatelessWidget {
         children: [
           Expanded(
             child: Divider(
-              color: kPrimaryBlueColor,
+              color: primaryDarkColor,
               height: 1.5,
             ),
           ),
@@ -25,14 +25,14 @@ class SignUpDivider extends StatelessWidget {
             child: Text(
               'or',
               style: TextStyle(
-                color: kPrimaryBlueColor,
+                color: primaryDarkColor,
                 fontWeight: FontWeight.w600,
               ),
             ),
           ),
           Expanded(
             child: Divider(
-              color: kPrimaryBlueColor,
+              color: primaryDarkColor,
               height: 1.5,
             ),
           ),

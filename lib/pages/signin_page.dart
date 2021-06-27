@@ -1,4 +1,4 @@
-import 'package:authentication_app/backgrounds/gradient_background.dart';
+import 'package:authentication_app/backgrounds/background.dart';
 import 'package:authentication_app/components/account_login_signup_button.dart';
 import 'package:authentication_app/components/rounded_button.dart';
 import 'package:authentication_app/components/rounded_field.dart';
@@ -7,17 +7,16 @@ import 'package:authentication_app/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seafarer/seafarer.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignInPageState createState() => _SignInPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignInPageState extends State<SignInPage> {
   bool isPasswordVisible = false;
 
   @override
@@ -25,23 +24,18 @@ class _LoginPageState extends State<LoginPage> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        child: GradientBackground(
+        child: Background(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                'assets/icons/logo_rb.svg',
-                width: size.width * 0.6,
-              ),
               SizedBox(
-                height: size.height * 0.02,
+                height: size.height * 0.2,
               ),
-              SizedBox(
-                height: size.height * 0.03,
-              ),
-              Image.asset(
-                'assets/images/rb-university.png',
-                height: size.height * 0.25,
+              Text(
+                'Sign in.',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(
                 height: size.height * 0.03,
@@ -51,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                 keyboardType: TextInputType.emailAddress,
                 icon: Icon(
                   Icons.person,
-                  color: kPrimaryBlueColor,
+                  color: primaryDarkColor,
                 ),
               ),
               RoundedField(
@@ -60,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: !this.isPasswordVisible,
                 icon: Icon(
                   Icons.password,
-                  color: kPrimaryBlueColor,
+                  color: primaryDarkColor,
                 ),
                 suffixIcon: GestureDetector(
                   onTap: () {
@@ -72,12 +66,12 @@ class _LoginPageState extends State<LoginPage> {
                     this.isPasswordVisible
                         ? Icons.visibility
                         : Icons.visibility_off,
-                    color: kPrimaryBlueColor,
+                    color: primaryDarkColor,
                   ),
                 ),
               ),
               RoundedButton(
-                label: 'LOGIN',
+                label: 'Sign In',
                 onPressed: () {},
               ),
               SizedBox(height: size.height * 0.03),

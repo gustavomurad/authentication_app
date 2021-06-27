@@ -1,4 +1,4 @@
-import 'package:authentication_app/backgrounds/gradient_background.dart';
+import 'package:authentication_app/backgrounds/background.dart';
 import 'package:authentication_app/components/account_login_signup_button.dart';
 import 'package:authentication_app/components/rounded_button.dart';
 import 'package:authentication_app/components/rounded_field.dart';
@@ -7,7 +7,6 @@ import 'package:authentication_app/components/social_round_button.dart';
 import 'package:authentication_app/routes/routes.dart';
 import 'package:authentication_app/theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:seafarer/seafarer.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -25,23 +24,18 @@ class _SignUpPageState extends State<SignUpPage> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        child: GradientBackground(
+        child: Background(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                'assets/icons/logo_rb.svg',
-                width: size.width * 0.6,
-              ),
               SizedBox(
-                height: size.height * 0.02,
+                height: size.height * 0.2,
               ),
-              SizedBox(
-                height: size.height * 0.03,
-              ),
-              Image.asset(
-                'assets/images/rb-work.png',
-                height: size.height * 0.25,
+              Text(
+                'Sign up.',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(
                 height: size.height * 0.03,
@@ -51,7 +45,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 keyboardType: TextInputType.emailAddress,
                 icon: Icon(
                   Icons.person,
-                  color: kPrimaryBlueColor,
+                  color: primaryDarkColor,
                 ),
               ),
               RoundedField(
@@ -60,7 +54,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 obscureText: !this.isPasswordVisible,
                 icon: Icon(
                   Icons.password,
-                  color: kPrimaryBlueColor,
+                  color: primaryDarkColor,
                 ),
                 suffixIcon: GestureDetector(
                   onTap: () {
@@ -72,7 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     this.isPasswordVisible
                         ? Icons.visibility
                         : Icons.visibility_off,
-                    color: kPrimaryBlueColor,
+                    color: primaryDarkColor,
                   ),
                 ),
               ),

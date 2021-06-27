@@ -16,10 +16,6 @@ class SocialRoundButton extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        border: Border.all(
-          width: 2,
-          color: kPrimaryBlueLightColor,
-        ),
         shape: BoxShape.circle,
       ),
       child: IconButton(
