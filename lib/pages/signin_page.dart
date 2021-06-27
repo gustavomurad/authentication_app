@@ -2,6 +2,7 @@ import 'package:authentication_app/backgrounds/background.dart';
 import 'package:authentication_app/components/account_login_signup_button.dart';
 import 'package:authentication_app/components/rounded_button.dart';
 import 'package:authentication_app/components/rounded_field.dart';
+import 'package:authentication_app/pages/signup_page.dart';
 import 'package:authentication_app/routes/routes.dart';
 import 'package:authentication_app/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,6 +11,8 @@ import 'package:flutter/widgets.dart';
 import 'package:seafarer/seafarer.dart';
 
 class SignInPage extends StatefulWidget {
+  static final String route = 'sign-up';
+
   const SignInPage({Key? key}) : super(key: key);
 
   @override
@@ -78,7 +81,7 @@ class _SignInPageState extends State<SignInPage> {
               AccountLoginSignupButton(
                 isLogin: true,
                 onTap: () => Routes.seafarer.navigate(
-                  "/signup",
+                  SignUpPage.route,
                   navigationType: NavigationType.popAndPushNamed,
                   transitions: [SeafarerTransition.zoom_in],
                 ),

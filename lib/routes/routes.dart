@@ -9,19 +9,19 @@ class Routes {
   static void createRoutes() {
     seafarer.addRoutes([
       SeafarerRoute(
-        name: "/welcome",
+        name: WelcomePage.route,
         builder: (context, args, params) {
           return WelcomePage();
         },
       ),
       SeafarerRoute(
-        name: "/login",
+        name: SignInPage.route,
         builder: (context, args, params) {
           return SignInPage();
         },
       ),
       SeafarerRoute(
-        name: "/signup",
+        name: SignUpPage.route,
         builder: (context, args, params) {
           return SignUpPage();
         },

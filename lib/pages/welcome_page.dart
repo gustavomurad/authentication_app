@@ -1,5 +1,7 @@
 import 'package:authentication_app/backgrounds/background.dart';
 import 'package:authentication_app/components/rounded_button.dart';
+import 'package:authentication_app/pages/signin_page.dart';
+import 'package:authentication_app/pages/signup_page.dart';
 import 'package:authentication_app/routes/routes.dart';
 import 'package:authentication_app/theme/colors.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +9,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:seafarer/seafarer.dart';
 
 class WelcomePage extends StatelessWidget {
+  static final String route = 'welcome';
   const WelcomePage({Key? key}) : super(key: key);
 
   @override
@@ -49,7 +52,7 @@ class WelcomePage extends StatelessWidget {
               RoundedButton(
                 label: 'Sign In',
                 onPressed: () => Routes.seafarer.navigate(
-                  "/login",
+                  SignInPage.route,
                   transitions: [SeafarerTransition.zoom_in],
                 ),
               ),
@@ -57,7 +60,7 @@ class WelcomePage extends StatelessWidget {
                 label: 'Sign Up',
                 backgroundColor: primaryLightColor,
                 onPressed: () => Routes.seafarer.navigate(
-                  "/signup",
+                  SignUpPage.route,
                   transitions: [SeafarerTransition.zoom_in],
                 ),
               ),
