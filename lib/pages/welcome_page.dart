@@ -1,5 +1,6 @@
 import 'package:authentication_app/backgrounds/background.dart';
 import 'package:authentication_app/components/rounded_button.dart';
+import 'package:authentication_app/components/welcome_logo.dart';
 import 'package:authentication_app/pages/signin_page.dart';
 import 'package:authentication_app/pages/signup_page.dart';
 import 'package:authentication_app/routes/routes.dart';
@@ -10,6 +11,7 @@ import 'package:seafarer/seafarer.dart';
 
 class WelcomePage extends StatelessWidget {
   static final String route = 'welcome';
+
   const WelcomePage({Key? key}) : super(key: key);
 
   @override
@@ -21,31 +23,7 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Positioned(
-                    child: SvgPicture.asset(
-                      'assets/images/bitcoin-network-2.svg',
-                      height: size.height * 0.5,
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    child: Container(
-                      width: size.width * 0.8,
-                      child: Text(
-                        'Bitcoin is an innovative payment network and a new kind of money.',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                        softWrap: true,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              WelcomeLogo(),
               SizedBox(
                 height: size.height * 0.03,
               ),
