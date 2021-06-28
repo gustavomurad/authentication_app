@@ -6,7 +6,6 @@ import 'package:authentication_app/pages/signup_page.dart';
 import 'package:authentication_app/routes/routes.dart';
 import 'package:authentication_app/theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:seafarer/seafarer.dart';
 
 class WelcomePage extends StatelessWidget {
