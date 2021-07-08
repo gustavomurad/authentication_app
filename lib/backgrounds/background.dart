@@ -25,17 +25,17 @@ class Background extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 60,
+            top: size.height * 0.1,
             child: SvgPicture.asset(
               'assets/images/bitcoin-logo.svg',
               width: size.width * 0.3,
             ),
           ),
           Positioned(
-            bottom: -130,
+            top: size.height * 0.85,
             child: SvgPicture.asset(
               'assets/images/bottom.svg',
-              width: size.width * 1.3,
+              width: size.width * 1.1,
             ),
           ),
           this.child,
